@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Oxypred</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="  https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@800;900&display=swap" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+
+  <meta http-equiv="refresh" content="2" />
+
+</head>
+
+<body>
+  <style>
+    .custom {
+      background-color: #32CD32;
+    }
+
+    .card {
+      text-align: center;
+    }
+
+    .row {
+      align-items: center;
+    }
+
+    .ct {
+      /* background: #e7e7e7; */
+      display: flex;
+      justify-content: center;
+      padding: 5%;
+      width: 80%;
+    }
+
+    .cent {
+      /* background: #ccc; */
+      padding: 2%;
+      color: #32CD32;
+    }
+
+    table {
+      text-align: center;
+
+    }
+
+    tbody {
+      color: #32CD32;
+    }
+
+    thead {
+      background-color: #32CD32;
+      color: white;
+    }
+  </style>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <!-- As a heading -->
+        <nav class="navbar custom">
+          <div class="container-fluid ">
+            <span class="navbar-brand mb-0 h1 "
+              style="color: white; font-family: 'Cairo', sans-serif; font-size: 40px;">OXYPRED</span>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col ct">
+        <div class="card cent" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Current Oxygen Utilization</h5>
+            <h3 class="card-subtitle">{{ arr['curr'] }}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col ct">
+        <div class="card cent" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Predicted Oxygen Requirement </h5>
+            <h3 class="card-subtitle ">{{ arr['pred'] }}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col ct">
+        <div class="card cent" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Estimated Exhaustion Period</h5>
+            <h3 class="card-subtitle ">Ends (in). {{arr['days']}} </h3>
+            <h6 class="card-subtitle ">Current Inventory : {{arr['inv']}} </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-6" id="img"><img src="http://127.0.0.1:5000/plot" alt=""></div>
+    </div>
+  </div>
+  <script>
+    
+  </script>
+</body>
+
+</html>
